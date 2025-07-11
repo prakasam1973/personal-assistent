@@ -1,0 +1,109 @@
+html, body, #root {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+body {
+  overflow-y: auto;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 210 29% 97%; /* #F5F7FA */
+    --foreground: 210 100% 21%; /* #003865 */
+
+    --card: 0 0% 100%; /* white */
+    --card-foreground: 210 100% 21%; /* #003865 */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 100% 21%;
+
+    --primary: 210 100% 21%; /* #003865 */
+    --primary-foreground: 0 0% 100%; /* white */
+
+    --secondary: 193 100% 44%; /* #00A9E0 */
+    --secondary-foreground: 0 0% 100%; /* white */
+
+    --muted: 210 29% 97%; /* #F5F7FA */
+    --muted-foreground: 210 100% 21%;
+
+    --accent: 193 100% 44%; /* #00A9E0 */
+    --accent-foreground: 0 0% 100%; /* white */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 29% 90%; /* light gray border */
+    --input: 210 29% 90%;
+    --ring: 193 100% 44%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 100% 21%; /* #003865 */
+    --sidebar-foreground: 0 0% 100%; /* white */
+    --sidebar-primary: 193 100% 44%; /* #00A9E0 */
+    --sidebar-primary-foreground: 0 0% 100%; /* white */
+    --sidebar-accent: 210 29% 97%; /* #F5F7FA */
+    --sidebar-accent-foreground: 210 100% 21%; /* #003865 */
+    --sidebar-border: 210 29% 90%;
+    --sidebar-ring: 193 100% 44%;
+  }
+
+  .dark {
+    --background: 210 100% 21%; /* #003865 */
+    --foreground: 0 0% 100%; /* white */
+
+    --card: 210 100% 21%; /* #003865 */
+    --card-foreground: 0 0% 100%; /* white */
+
+    --popover: 210 100% 21%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 193 100% 44%; /* #00A9E0 */
+    --primary-foreground: 210 100% 21%; /* #003865 */
+
+    --secondary: 0 0% 100%; /* white */
+    --secondary-foreground: 210 100% 21%; /* #003865 */
+
+    --muted: 210 100% 21%; /* #003865 */
+    --muted-foreground: 0 0% 100%;
+
+    --accent: 193 100% 44%; /* #00A9E0 */
+    --accent-foreground: 210 100% 21%; /* #003865 */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 100% 21%;
+    --input: 210 100% 21%;
+    --ring: 193 100% 44%;
+
+    --sidebar-background: 0 0% 100%; /* white */
+    --sidebar-foreground: 210 100% 21%; /* #003865 */
+    --sidebar-primary: 193 100% 44%; /* #00A9E0 */
+    --sidebar-primary-foreground: 210 100% 21%; /* #003865 */
+    --sidebar-accent: 210 100% 21%; /* #003865 */
+    --sidebar-accent-foreground: 0 0% 100%; /* white */
+    --sidebar-border: 210 100% 21%;
+    --sidebar-ring: 193 100% 44%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+/* Custom font utility for Segoe UI */
+.font-segoe {
+  font-family: 'Segoe UI', 'Arial', 'sans-serif';
+}
+  }
+}
